@@ -1,11 +1,13 @@
 package util;
 
 /*
-   Utility Classes have lot of issues take the example of the below code multiple clients can potentially call this method say tomorrow the length of minimum characters 
-   is changed to 20 then all the client code will have issues and we need to retest all the client code secondly if some of the clients still want to use say 15 we have to 
-   create another method to check those characters that will be a huge burder and all the more if this code is placed in a jar file the developer will not have a clue 
-   as he would not find it in normal search also utility classes are unbreakable and hard to test thats why they are a major threat to the code base and one should 
-   really be careful a good alternative is to use composible decorators 
+ Utility classes often come with several issues. Consider the following example: if a utility method that enforces a minimum length 
+ constraint is used by multiple clients, any change in the minimum length requirement—such as increasing it from 15 to 20 characters—can 
+ lead to issues across all client code. This would necessitate extensive retesting of all client code. Additionally, 
+ if some clients still need the original 15-character constraint, you would have to create a separate method for this requirement, 
+ leading to unnecessary complexity and maintenance overhead. Furthermore, if this utility class is packaged in a JAR file, developers 
+ may struggle to locate and modify it, as it might not be easily discoverable through standard search methods. Utility classes can also be
+ rigid and difficult to test, posing a significant risk to the codebase. A more flexible and manageable approach is to use composable decorators instead.
 */
 
 public class StringUtils {
